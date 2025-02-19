@@ -19,5 +19,6 @@ func logOut(username, session string) error {
 		return err
 	}
 	defer resp.Body.Close()
+
 	return nil
 }

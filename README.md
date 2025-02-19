@@ -1,13 +1,47 @@
-### Explanation
+# Crawl Nile
 
-- **Title and Description**: Provides a brief overview of what the project does.
-- **Features**: Lists the main functionalities of the project.
-- **Prerequisites**: Specifies the requirements needed to run the project.
-- **Installation**: Guides users on how to set up the project locally.
-- **Usage**: Explains how to run the project with example commands.
-- **Project Structure**: Gives an overview of the main components of the project.
-- **Contributing**: Encourages contributions and explains how to do so.
-- **License**: States the licensing information.
-- **Contact**: Provides contact information for further inquiries.
+Crawl Nile is a Go-based application designed to interact with the Nile University SIS (Student Information System). It allows users to log in, scrape course information, and log out programmatically.
 
-Feel free to adjust the content to better fit your project's details and any additional information you might want to include.
+## Features
+
+- Retrieve session tokens for authentication.
+- Log in to the Nile SIS using provided credentials.
+- Scrape course information including course code, name, grade, and credit.
+- Log out from the SIS securely.
+
+## Prerequisites
+
+- Go 1.23.2 or later
+- Internet connection
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/fvnju/crawl-nile.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd crawl-nile
+```
+
+3. Install dependencies:
+
+```bash
+go mod tidy
+```
+
+## Usage
+
+Run the application in CLI mode with your username and password:
+
+```bash
+go run main.go -c <username> <password>
+```
+
+Optional flags:
+
+- `-t`: Measure execution time.
